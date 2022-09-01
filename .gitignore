@@ -1,0 +1,6 @@
+*.tmp.driveupload
+*config.yml
+/dev/*
+*.DS_Store
+node_modules/*
+yarn.lock
