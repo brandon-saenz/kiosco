@@ -70,13 +70,13 @@ define('STASIS', $config['base_url']);
         
 
         <!-- FRAMWORK MATERIALIZE CSS -->
-        <link href="css/materialize.css" rel="stylesheet" type="text/css" />
-        <script src="js/materialize.min.js" type="text/javascript"></script>
+        <link href="<?php echo STASIS; ?>/css/materialize.css" rel="stylesheet" type="text/css" />
+        <script src="<?php echo STASIS; ?>/js/materialize.min.js" type="text/javascript"></script>
         
         <!-- ESTILOS Y FUNCIONES CUSTOM -->
 
-        <link href="css/styles.css" rel="stylesheet" type="text/css" />
-        <script src="js/scripts.js" type="text/javascript"></script>
+        <link href="<?php echo STASIS; ?>/css/styles.css" rel="stylesheet" type="text/css" />
+        <script src="<?php echo STASIS; ?>/js/scripts.js" type="text/javascript"></script>
 
         <!-- ASSETS -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -136,7 +136,7 @@ define('STASIS', $config['base_url']);
                                         </span>
                                         <div class="div-center m-v-05">
                                             <div class="qr-rancho" onclick="go_page(2)">
-                                                <img class="qr-img pointer" src="assets/qr-codes/solicitud_servicio.svg">
+                                                <img class="qr-img pointer" src="<?php echo STASIS; ?>/assets/qr-codes/solicitud_servicio.svg">
                                             </div>
                                         </div>
                                     </p>
