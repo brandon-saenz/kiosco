@@ -16,7 +16,7 @@ $( document ).ready(function() {
         img_cobroplan[0].style.opacity='1'; img_rancho[0].style.opacity='0';
         swiper_button_prev[0].style.color='var(--blue)'; swiper_button_next[0].style.color='var(--blue)';
         for(var i=0; i<=qr_rancho.length; i++){
-            qr_rancho[i].style.backgroundImage='url("assets/marco-qr-blue.svg")';
+            qr_rancho[i].style.backgroundImage='url("/pantallas/assets/marco-qr-blue.svg")';
         }
     }
 
@@ -27,7 +27,7 @@ $( document ).ready(function() {
         swiper_button_prev[0].style.color='var(--green)'; swiper_button_next[0].style.color='var(--green)';
 
         for(var i=0; i<=qr_rancho.length; i++){
-            qr_rancho[i].style.backgroundImage='url("assets/marco-qr-green.svg")';
+            qr_rancho[i].style.backgroundImage='url("/pantallas/assets/marco-qr-green.svg")';
         }
     }
 
