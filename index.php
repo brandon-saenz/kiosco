@@ -91,8 +91,8 @@ define('STASIS', $config['base_url']);
     <body class="index">
         <div>
             <div class="div-center">
-                <img class="img-rancho pointer" onclick="go_page(0)" src="assets/rancho-logo.svg">
-                <img class="img-cobroplan pointer" style="position: absolute;" onclick="go_page(0)" src="assets/cobroplan-logo.svg">
+                <img class="img-rancho pointer" onclick="go_page(0)" src="/pantallas/assets/rancho-logo.svg">
+                <img class="img-cobroplan pointer" style="position: absolute;" onclick="go_page(0)" src="/pantallas/assets/cobroplan-logo.svg">
             </div>
         </div>
         <div class="swiper body-swiper">
@@ -136,7 +136,7 @@ define('STASIS', $config['base_url']);
                                         </span>
                                         <div class="div-center m-v-05">
                                             <div class="qr-rancho" onclick="go_page(2)">
-                                                <img class="qr-img pointer" src="assets/qr-codes/solicitud_servicio.svg">
+                                                <img class="qr-img pointer" src="/pantallas/assets/qr-codes/solicitud_servicio.svg">
                                             </div>
                                         </div>
                                     </p>
@@ -159,7 +159,7 @@ define('STASIS', $config['base_url']);
                                         <span class="line-b pointer" onclick="go_page(1)">para ver las instrucciones</span>
                                         <div class="div-center m-v-05">
                                             <div class="qr-rancho" onclick="go_page(1)">
-                                                <img class="qr-img pointer" src="assets/qr-codes/yt_solicitud_servicio.svg">
+                                                <img class="qr-img pointer" src="/pantallas/assets/qr-codes/yt_solicitud_servicio.svg">
                                             </div>
                                         </div>
                                     </p>
@@ -209,7 +209,7 @@ define('STASIS', $config['base_url']);
                                         </span>
                                         <div class="div-center m-v-05">
                                             <div class="qr-rancho" onclick="go_page(3)">
-                                                <img class="qr-img pointer" src="assets/qr-codes/minutas.svg">
+                                                <img class="qr-img pointer" src="/pantallas/assets/qr-codes/minutas.svg">
                                             </div>
                                         </div>
                                     </p>
@@ -232,7 +232,7 @@ define('STASIS', $config['base_url']);
                                         <span class="line-b pointer" onclick="go_page(1)">para ver las instrucciones</span>
                                         <div class="div-center m-v-05">
                                             <div class="qr-rancho" onclick="go_page(1)">
-                                                <img class="qr-img pointer" src="assets/qr-codes/yt_solicitud_servicio.svg">
+                                                <img class="qr-img pointer" src="/pantallas/assets/qr-codes/yt_solicitud_servicio.svg">
                                             </div>
                                         </div>
                                     </p>
@@ -282,7 +282,7 @@ define('STASIS', $config['base_url']);
                                         </span>
                                         <div class="div-center m-v-05">
                                             <div class="qr-rancho" onclick="go_page(4)">
-                                                <img class="qr-img pointer" src="assets/qr-codes/catastral.svg">
+                                                <img class="qr-img pointer" src="/pantallas/assets/qr-codes/catastral.svg">
                                             </div>
                                         </div>
                                     </p>
@@ -305,7 +305,7 @@ define('STASIS', $config['base_url']);
                                         <span class="line-b pointer" onclick="go_page(1)">para ver las instrucciones</span>
                                         <div class="div-center m-v-05">
                                             <div class="qr-rancho" onclick="go_page(1)">
-                                                <img class="qr-img pointer" src="assets/qr-codes/yt_solicitud_servicio.svg">
+                                                <img class="qr-img pointer" src="/pantallas/assets/qr-codes/yt_solicitud_servicio.svg">
                                             </div>
                                         </div>
                                     </p>
@@ -353,7 +353,7 @@ define('STASIS', $config['base_url']);
                                         </span>
                                         <div class="div-center m-v-05">
                                             <div class="qr-rancho" onclick="go_page(1)">
-                                                <img class="qr-img pointer" src="assets/qr-codes/eventos.svg">
+                                                <img class="qr-img pointer" src="/pantallas/assets/qr-codes/eventos.svg">
                                             </div>
                                         </div>
                                     </p>
@@ -404,7 +404,7 @@ define('STASIS', $config['base_url']);
                                         </span>
                                         <div class="div-center m-v-05">
                                             <div class="qr-rancho" onclick="go_page(6)">
-                                                <img class="qr-img pointer" src="assets/qr-codes/wa_cobroplan.svg">
+                                                <img class="qr-img pointer" src="/pantallas/assets/qr-codes/wa_cobroplan.svg">
                                             </div>
                                         </div>
                                     </p>
@@ -427,7 +427,7 @@ define('STASIS', $config['base_url']);
                                         <span class="line-b pointer" onclick="go_page(1)">para ver las instrucciones</span>
                                         <div class="div-center m-v-05">
                                             <div class="qr-rancho" onclick="go_page(1)">
-                                                <img class="qr-img pointer" src="assets/qr-codes/yt_solicitud_servicio.svg">
+                                                <img class="qr-img pointer" src="/pantallas/assets/qr-codes/yt_solicitud_servicio.svg">
                                             </div>
                                         </div>
                                     </p>
