@@ -1,8 +1,55 @@
+<?php
+// Modo produccion/desarrollo
+// ini_set('display_errors', 1);
+ini_set('display_errors', '0');
+
+ini_set('session.cookie_lifetime', 60 * 60 * 24 * 7);
+ini_set('session.gc_maxlifetime', 60 * 60 * 24 * 7);
+ini_set('xdebug.var_display_max_depth', -1);
+ini_set('xdebug.var_display_max_children', -1);
+ini_set('xdebug.var_display_max_data', -1);
+
+// Definir constante de dominio
+// Ejemplo: http://localhost
+define('DOMINIO', (strtolower(getenv('HTTPS')) == 'on' ? 'https' : 'http') . '://' . getenv('HTTP_HOST') . (($p = getenv('SERVER_PORT')) != 80 AND $p != 443 ? ":$p" : ''));
+
+// Definir constante de la direccion
+// Ejemplo: /website/
+define('DIRECCION', parse_url(getenv('REQUEST_URI'), PHP_URL_PATH));
+
+// Definir carpeta raiz del sistema
+// Ejemplo: D:\wamp\www\website/
+define('ROOT_DIR', realpath(dirname(__FILE__)) .'/');
+
+// Definir la carpeta de aplicacion
+// Ejemplo: D:\wamp\www\website/aplicacion/
+define('APP', ROOT_DIR .'aplicacion/');
+
+// Definir el locale para la p�gina
+setlocale(LC_ALL,"es_ES@euro","es_ES","esp");
+
+// Definir la zona horaria
+date_default_timezone_set('America/Tijuana');
+
+// Definir un custom path para guardar las sesiones
+ini_set('session.save_path', ROOT_DIR . 'data/sessions');
+
+// Definir la decodificaci�n
+// iconv_set_encoding("internal_encoding", "UTF-8");
+mb_internal_encoding('UTF-8');
+
+session_start();
+
+// Definir URL Base
+global $config;
+define('STASIS', $config['base_url']);
+
+?>
 <!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
-
+        <base href="<?php echo STASIS; ?>/">
         <!-- Always force latest IE rendering engine or request Chrome Frame -->
         <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,13 +70,13 @@
         
 
         <!-- FRAMWORK MATERIALIZE CSS -->
-        <link href="https://saevalcas.mx/pantallas/kiosco/css/materialize.css" rel="stylesheet" type="text/css" />
-        <script src="https://saevalcas.mx/pantallas/kiosco/js/materialize.min.js" type="text/javascript"></script>
+        <link href="css/materialize.css" rel="stylesheet" type="text/css" />
+        <script src="js/materialize.min.js" type="text/javascript"></script>
         
         <!-- ESTILOS Y FUNCIONES CUSTOM -->
 
-        <link href="https://saevalcas.mx/pantallas/kiosco/css/styles.css" rel="stylesheet" type="text/css" />
-        <script src="https://saevalcas.mx/pantallas/kiosco/js/scripts.js" type="text/javascript"></script>
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
+        <script src="js/scripts.js" type="text/javascript"></script>
 
         <!-- ASSETS -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -37,15 +84,15 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         
-        <link href="https://saevalcas.mx/pantallas/kiosco/assets/logo.ico" rel="icon" type="image/x-icon" />
+        <link href="assets/logo.ico" rel="icon" type="image/x-icon" />
 
     </head>
 
     <body class="index">
         <div>
             <div class="div-center">
-                <img class="img-rancho pointer" onclick="go_page(0)" src="https://saevalcas.mx/pantallas/assets/rancho-logo.svg">
-                <img class="img-cobroplan pointer" style="position: absolute;" onclick="go_page(0)" src="https://saevalcas.mx/pantallas/assets/cobroplan-logo.svg">
+                <img class="img-rancho pointer" onclick="go_page(0)" src="assets/rancho-logo.svg">
+                <img class="img-cobroplan pointer" style="position: absolute;" onclick="go_page(0)" src="assets/cobroplan-logo.svg">
             </div>
         </div>
         <div class="swiper body-swiper">
@@ -89,7 +136,7 @@
                                         </span>
                                         <div class="div-center m-v-05">
                                             <div class="qr-rancho" onclick="go_page(2)">
-                                                <img class="qr-img pointer" src="https://saevalcas.mx/pantallas/assets/qr-codes/solicitud_servicio.svg">
+                                                <img class="qr-img pointer" src="assets/qr-codes/solicitud_servicio.svg">
                                             </div>
                                         </div>
                                     </p>
@@ -112,7 +159,7 @@
                                         <span class="line-b pointer" onclick="go_page(1)">para ver las instrucciones</span>
                                         <div class="div-center m-v-05">
                                             <div class="qr-rancho" onclick="go_page(1)">
-                                                <img class="qr-img pointer" src="https://saevalcas.mx/pantallas/assets/qr-codes/yt_solicitud_servicio.svg">
+                                                <img class="qr-img pointer" src="assets/qr-codes/yt_solicitud_servicio.svg">
                                             </div>
                                         </div>
                                     </p>
@@ -162,7 +209,7 @@
                                         </span>
                                         <div class="div-center m-v-05">
                                             <div class="qr-rancho" onclick="go_page(3)">
-                                                <img class="qr-img pointer" src="https://saevalcas.mx/pantallas/assets/qr-codes/minutas.svg">
+                                                <img class="qr-img pointer" src="assets/qr-codes/minutas.svg">
                                             </div>
                                         </div>
                                     </p>
@@ -185,7 +232,7 @@
                                         <span class="line-b pointer" onclick="go_page(1)">para ver las instrucciones</span>
                                         <div class="div-center m-v-05">
                                             <div class="qr-rancho" onclick="go_page(1)">
-                                                <img class="qr-img pointer" src="https://saevalcas.mx/pantallas/assets/qr-codes/yt_solicitud_servicio.svg">
+                                                <img class="qr-img pointer" src="assets/qr-codes/yt_solicitud_servicio.svg">
                                             </div>
                                         </div>
                                     </p>
@@ -235,7 +282,7 @@
                                         </span>
                                         <div class="div-center m-v-05">
                                             <div class="qr-rancho" onclick="go_page(4)">
-                                                <img class="qr-img pointer" src="https://saevalcas.mx/pantallas/assets/qr-codes/catastral.svg">
+                                                <img class="qr-img pointer" src="assets/qr-codes/catastral.svg">
                                             </div>
                                         </div>
                                     </p>
@@ -258,7 +305,7 @@
                                         <span class="line-b pointer" onclick="go_page(1)">para ver las instrucciones</span>
                                         <div class="div-center m-v-05">
                                             <div class="qr-rancho" onclick="go_page(1)">
-                                                <img class="qr-img pointer" src="https://saevalcas.mx/pantallas/assets/qr-codes/yt_solicitud_servicio.svg">
+                                                <img class="qr-img pointer" src="assets/qr-codes/yt_solicitud_servicio.svg">
                                             </div>
                                         </div>
                                     </p>
@@ -306,7 +353,7 @@
                                         </span>
                                         <div class="div-center m-v-05">
                                             <div class="qr-rancho" onclick="go_page(1)">
-                                                <img class="qr-img pointer" src="https://saevalcas.mx/pantallas/assets/qr-codes/eventos.svg">
+                                                <img class="qr-img pointer" src="assets/qr-codes/eventos.svg">
                                             </div>
                                         </div>
                                     </p>
@@ -357,7 +404,7 @@
                                         </span>
                                         <div class="div-center m-v-05">
                                             <div class="qr-rancho" onclick="go_page(6)">
-                                                <img class="qr-img pointer" src="https://saevalcas.mx/pantallas/assets/qr-codes/wa_cobroplan.svg">
+                                                <img class="qr-img pointer" src="assets/qr-codes/wa_cobroplan.svg">
                                             </div>
                                         </div>
                                     </p>
@@ -380,7 +427,7 @@
                                         <span class="line-b pointer" onclick="go_page(1)">para ver las instrucciones</span>
                                         <div class="div-center m-v-05">
                                             <div class="qr-rancho" onclick="go_page(1)">
-                                                <img class="qr-img pointer" src="https://saevalcas.mx/pantallas/assets/qr-codes/yt_solicitud_servicio.svg">
+                                                <img class="qr-img pointer" src="assets/qr-codes/yt_solicitud_servicio.svg">
                                             </div>
                                         </div>
                                     </p>
