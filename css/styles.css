@@ -29,7 +29,7 @@ body{
 
 .qr-rancho{
     width: var(--qr-med); height: var(--qr-med);
-    background-image: url('../pantallas/assets/marco-qr-green.svg');
+    background-image: url('../assets/marco-qr-green.svg');
     transition: all 0.5s;
 }
 
