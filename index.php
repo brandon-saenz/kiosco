@@ -70,8 +70,8 @@ define('STASIS', $config['base_url']);
         
 
         <!-- FRAMWORK MATERIALIZE CSS -->
-        <link href="<?php echo STASIS; ?>/css/materialize.css" rel="stylesheet" type="text/css" />
-        <script src="<?php echo STASIS; ?>/js/materialize.min.js" type="text/javascript"></script>
+        <link href="https://saevalcas.mx/pantallas/css/materialize.css" rel="stylesheet" type="text/css" />
+        <script src="https://saevalcas.mx/pantallas/js/materialize.min.js" type="text/javascript"></script>
         
         <!-- ESTILOS Y FUNCIONES CUSTOM -->
 
