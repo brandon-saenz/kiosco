@@ -15,9 +15,9 @@ $( document ).ready(function() {
         arrow_rancho.style.fill='var(--blue)';
         img_cobroplan[0].style.opacity='1'; img_rancho[0].style.opacity='0';
         swiper_button_prev[0].style.color='var(--blue)'; swiper_button_next[0].style.color='var(--blue)';
-        for(var i=0; i<=qr_rancho.length; i++){
-            qr_rancho[i].style.backgroundImage='url("/pantallas/assets/marco-qr-blue.svg")';
-        }
+        // for(var i=0; i<=qr_rancho.length; i++){
+        //     qr_rancho[i].style.backgroundImage='url("/pantallas/assets/marco-qr-blue.svg")';
+        // }
     }
 
     function change_rancho(){
@@ -26,9 +26,9 @@ $( document ).ready(function() {
         img_cobroplan[0].style.opacity='0'; img_rancho[0].style.opacity='1';
         swiper_button_prev[0].style.color='var(--green)'; swiper_button_next[0].style.color='var(--green)';
 
-        for(var i=0; i<=qr_rancho.length; i++){
-            qr_rancho[i].style.backgroundImage='url("/pantallas/assets/marco-qr-green.svg")';
-        }
+        // for(var i=0; i<=qr_rancho.length; i++){
+        //     qr_rancho[i].style.backgroundImage='url("/pantallas/assets/marco-qr-green.svg")';
+        // }
     }
 
     function events({ swiper, extendParams, on }) {
@@ -83,5 +83,5 @@ var pages=[
 
 function go_page(id_page){
     window.open(pages[id_page], '_blank');
-    win.focus();
+    window.focus();
 }
