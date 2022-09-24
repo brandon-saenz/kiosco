@@ -55,6 +55,10 @@ $( document ).ready(function() {
         keyboard: {
             enabled: true,
         },
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
         hashNavigation: {
             watchState: true,
         },
