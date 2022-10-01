@@ -43,6 +43,8 @@ $( document ).ready(function() {
                 change_cobroplan();
             }else if(swiper.activeIndex!=5){
                 change_rancho();
+            }else if(swiper.activeIndex<5){
+                change_rancho();
             }else{
                 change_rancho();
             }
