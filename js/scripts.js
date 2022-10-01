@@ -35,6 +35,7 @@ $( document ).ready(function() {
         extendParams({
           debugger: false,
         });
+        console.log('position swiper: '+swiper.activeIndex);
 
         on('slideChange', () => {
             if (!swiper.params.debugger) return;
