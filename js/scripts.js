@@ -38,7 +38,7 @@ $( document ).ready(function() {
 
         on('slideChange', () => {
             if (!swiper.params.debugger) return;
-            if(swiper.activeIndex>=4){
+            if(swiper.activeIndex==4){
                 change_cobroplan();
             }else{
                 change_rancho();
