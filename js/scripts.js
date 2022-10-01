@@ -60,7 +60,6 @@ $( document ).ready(function() {
         keyboard: {
             enabled: true,
         },
-        loop: true,
         autoplay: {
             delay: 3500,
             disableOnInteraction: false,
