@@ -39,11 +39,11 @@ $( document ).ready(function() {
 
         on('slideChange', () => {
             if (!swiper.params.debugger) return;
-            if(swiper.activeIndex==5){
+            if(swiper.activeIndex==4){
                 change_cobroplan();
-            }else if(swiper.activeIndex!=5){
+            }else if(swiper.activeIndex!=4){
                 change_rancho();
-            }else if(swiper.activeIndex<5){
+            }else if(swiper.activeIndex<4){
                 change_rancho();
             }else{
                 change_rancho();
